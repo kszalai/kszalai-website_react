@@ -1,14 +1,17 @@
 import React from 'react';
-import './styles.scss';
+import Nav from './nav/nav';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        Hello world
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    render() {
+        return (
+            <div className="App">
+                <Nav />
+                <header className="App-header">
+                    Hello world
+                </header>
+            </div>
+        );
+    }
 }
 
 export default App;
