@@ -11,8 +11,8 @@ class NavDropdown extends React.Component {
     render() {
         return (
             <li className={this.state.menuOpen ? 'dropdown open' : 'dropdown'}>
-                <a href="#" onClick={this.toggleMenu} class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i className={this.props.iconClass}></i>&nbsp;{this.props.name}<span class="caret"></span></a>
-                <ul class="dropdown-menu">
+                <a href="#" onClick={this.toggleMenu} className={'dropdown-toggle'} data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i className={this.props.iconClass}></i>&nbsp;{this.props.name}<span className={'caret'}></span></a>
+                <ul className={'dropdown-menu'}>
                     { this.props.children.map((data, index) => { return <NavLink name={data.props.name} title={data.props.title} hrefLink={data.props.hrefLink} iconClass={data.props.iconClass} /> }) }
                 </ul>
             </li>

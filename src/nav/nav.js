@@ -6,12 +6,12 @@ import NavDropdown from './nav-dropdown';
 class Nav extends React.Component {
 	render() {
 		return (
-			<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix-top">
-				<div class="container-fluid">
+			<nav className={'navbar navbar-default navbar-fixed-top'} data-spy="affix-top">
+				<div className={'container-fluid'}>
 					<NavHeader />
-					<div class="collapse navbar-collapse" id="myNavbar">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html"><i class="fa fa-home fa-fw"></i></a></li>
+					<div className={'collapse navbar-collapse'} id="myNavbar">
+						<ul className={'nav navbar-nav'}>
+							<NavLink hrefLink="index.html" iconClass="fa fa-home fa-fw" />
 							<NavLink name="About Me" hrefLink="#about" iconClass="fa fa-info-circle fa-fw" />
 							<NavLink name="Work History" hrefLink="#workhist" iconClass="fa fa-briefcase fa-fw" />
 							<NavLink name="Tech Skills" hrefLink="#skills" iconClass="fa fa-code fa-fw" />
