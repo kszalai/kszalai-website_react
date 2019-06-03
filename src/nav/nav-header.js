@@ -1,10 +1,15 @@
 import React from 'react';
 
 class NavHeader extends React.Component {
+    constructor(props) {
+        super(props);
+        this.menuExpandClick = this.menuExpandClick.bind(this);
+    }
+
     render() {
         return (
             <div className={'navbar-header'}>
-                <button type="button" className={'navbar-toggle'} data-toggle="collapse" data-target="#myNavbar">
+                <button type="button" className={'navbar-toggle'} onClick={this.menuExpandClick} data-toggle="collapse" data-target="#myNavbar">
                     <span className={'icon-bar'}></span>
                     <span className={'icon-bar'}></span>
                     <span className={'icon-bar'}></span>                        
@@ -19,6 +24,10 @@ class NavHeader extends React.Component {
                 </span>
             </div>			
         );
+    }
+
+    menuExpandClick() {
+        this.props.onMenuExpandClick('menuOpen');
     }
 }
 
