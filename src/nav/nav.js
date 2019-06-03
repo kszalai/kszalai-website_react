@@ -4,12 +4,18 @@ import NavLink from './nav-link';
 import NavDropdown from './nav-dropdown';
 
 class Nav extends React.Component {
+	constructor(props) {
+		super(props);
+		this.onNavOpen = this.onNavOpen.bind(this);
+		this.state = { menuOpen: false };
+	}
+
 	render() {
 		return (
 			<nav className={'navbar navbar-default navbar-fixed-top'} data-spy="affix-top">
 				<div className={'container-fluid'}>
-					<NavHeader />
-					<div className={'collapse navbar-collapse'} id="myNavbar">
+					<NavHeader onMenuExpandClick={this.onNavOpen} />
+					<div className={'navbar-collapse collapse ' + (this.state.menuOpen ? 'in' : '')} id="myNavbar">
 						<ul className={'nav navbar-nav'}>
 							<NavLink hrefLink="index.html" iconClass="fa fa-home fa-fw" />
 							<NavLink name="About Me" hrefLink="#about" iconClass="fa fa-info-circle fa-fw" />
@@ -27,6 +33,12 @@ class Nav extends React.Component {
 			</nav>
 		);
 	}
+
+	onNavOpen = (event) => {
+		this.setState(state => ({
+            menuOpen: !state.menuOpen
+        }));
+	};
 }
 
 export default Nav;
