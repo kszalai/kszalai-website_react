@@ -1,5 +1,4 @@
 import React from 'react';
-import NavLink from './nav-link';
 
 class NavDropdown extends React.Component {
     constructor(props) {
@@ -13,7 +12,7 @@ class NavDropdown extends React.Component {
             <li className={this.state.menuOpen ? 'dropdown open' : 'dropdown'}>
                 <a href="#" onClick={this.toggleMenu} className={'dropdown-toggle'} data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i className={this.props.iconClass}></i>&nbsp;{this.props.name}<span className={'caret'}></span></a>
                 <ul className={'dropdown-menu'}>
-                    { this.props.children.map((data, index) => { return <NavLink name={data.props.name} title={data.props.title} hrefLink={data.props.hrefLink} iconClass={data.props.iconClass} /> }) }
+                    { this.props.children }
                 </ul>
             </li>
         );

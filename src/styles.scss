@@ -2,6 +2,7 @@
 @import "~font-awesome/css/font-awesome.css";
 @import "~devicon/devicon-colors.css";
 @import "~devicon/devicon.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono");
 
 $primaryColor: #2162FF;
 $primaryColorLight: #768FFF;
@@ -23,262 +24,257 @@ $theme-color_dark: #000000;
 $font-stack: Roboto, Arial, Helvetica, sans-serif;
 
 body {
-	background: $background-color;
-	font-family: $font-stack;
-	color:#000000;
-	padding-top: 70px;
+    background: $background-color;
+    font-family: $font-stack;
+    color:#000000;
+    padding-top: 70px;
 }
 
-h1	{
-	font-family: $font-stack;
-	small{
-		color: $secondaryTextColor_light;			
-	}
+h1  {
+    font-family: $font-stack;
+    small{
+        color: $secondaryTextColor_light;			
+    }
 }
 
-h2.a	{
-	font-family: $font-stack;
+h2.a    {
+    font-family: $font-stack;
 }
 
 /*Links*/
-a{
-	&:link { /*Unvisited Link*/
-		color:#2196f3;
-		background-color:transparent;
-		text-decoration:none;
-	}
-	&:visited { /*Visited Link*/
-		color:#0a6ebd;
-		background-color:transparent;
-		text-decoration:none;
-	}
-	&:hover	{ /*Mouse over link*/
-		color:#0a6ebd; 
-		background-color:transparent; 
-		text-decoration:underline;
-	}
-	&:active { /*Selected Link*/
-		color:#0a6ebd;
-		background-color:transparent; 
-		text-decoration:underline;
-	}
+a {
+    &:link { /*Unvisited Link*/
+        color:#2196f3;
+        background-color:transparent;
+        text-decoration:none;
+    }
+    &:visited { /*Visited Link*/
+        color:#0a6ebd;
+        background-color:transparent;
+        text-decoration:none;
+    }
+    &:hover	{ /*Mouse over link*/
+        color:#0a6ebd; 
+        background-color:transparent; 
+        text-decoration:underline;
+    }
+    &:active { /*Selected Link*/
+        color:#0a6ebd;
+        background-color:transparent; 
+        text-decoration:underline;
+    }
 }
 
 .navbar	{	
-	border-radius: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 .navbar-default	{
-	background-color:$primaryColor;
-	border: none;
-	border-radius: 0px 0px 0px 0px;
-	-webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-	.navbar-nav{
-		>li{
-			>a{
-				color: $textColorOnPrimary;
-				-webkit-transition: color 0.275s, background-color 0.275s;
-				transition: color 0.275s, background-color 0.275s;
-				&:focus, &:hover{
-					color: $textColorOnPrimary;
-					background-color: $primaryColorDark;
-				}
-			}
-		}
-		>.active, >.open{
-			>a, >a:focus, >a:hover{
-				color: $textColorOnPrimary;
-				background-color: $primaryColorDark;
-			}
-		}
-	}
-	.navbar-collapse{
-		border-color: $primaryColor;
-	}
-	.navbar-toggle{
-		border: none;
-		.icon-bar{
-			background: #ffffff;
-		}
-	}
+    background-color:$primaryColor;
+    border: none;
+    border-radius: 0px 0px 0px 0px;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    .navbar-nav {
+        >li {
+            >a {
+                color: $textColorOnPrimary;
+                -webkit-transition: color 0.275s, background-color 0.275s;
+                transition: color 0.275s, background-color 0.275s;
+                &:focus, &:hover{
+                    color: $textColorOnPrimary;
+                    background-color: $primaryColorDark;
+                }
+            }
+        }
+        >.active, >.open {
+            >a, >a:focus, >a:hover {
+                color: $textColorOnPrimary;
+                background-color: $primaryColorDark;
+            }
+        }
+    }
+    .navbar-collapse {
+        border-color: $primaryColor;
+    }
+    .navbar-toggle {
+        border: none;
+        .icon-bar {
+            background: #ffffff;
+        }
+    }
 
-	& .navbar-toggle:focus, & .navbar-toggle:hover {
-		background-color: $primaryColorDark;
-	}
+    & .navbar-toggle:focus, & .navbar-toggle:hover {
+        background-color: $primaryColorDark;
+    }
 
-	@media (max-width: 767px){
-		& .navbar-nav .open .dropdown-menu>li>a {
-			color: $primaryTextColor_dark;
-		}
-	}
+    @media (max-width: 767px) {
+        & .navbar-nav .open .dropdown-menu>li>a {
+            color: $primaryTextColor_dark;
+        }
+    }
 }
 
 .navbar-brand	{
-	padding: 8px;
+    padding: 8px;
 
-	a>i{
-		margin-right: 8px;
-		color: $textColorOnPrimary;
-	}
+    a>i {
+        margin-right: 8px;
+        color: $textColorOnPrimary;
+    }
 }
 
 .card {
-	background-color: #FFFFFF;
-	border-radius: 2px;
-	-webkit-box-shadow: 
-		0px 3px 1px -2px rgba(0, 0, 0, 0.2), 
-		0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
-		0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-	box-shadow: 
-		0px 3px 1px -2px rgba(0, 0, 0, 0.2), 
-		0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
-		0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    -webkit-box-shadow: 
+        0px 3px 1px -2px rgba(0, 0, 0, 0.2), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 
+        0px 3px 1px -2px rgba(0, 0, 0, 0.2), 
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    
+    padding: 12px;
+    margin: 8px 0px;
+    @media only screen and (max-device-width: 768px) {
+        padding: 4px;
+        margin: 8px 0px;
+        small {
+            font-size: 16px;
+        }
+    }
+    h1 {
+        &.card-header {
+            padding: 16px 20px 0px 20px;
+            font-family: Roboto Mono, monospace;
+        }
+    }
+    h3 {
+        font-family: Roboto Mono, monospace;
+    }
 }
 
 .profile_pic {
-	border-radius: 150px;
-	margin: 20px;
-	width: 200px;
-	height: 200px;
-	@media only screen and (max-device-width: 768px){
-		width: 100px;
-		height: 100px;
-		margin: 45px -8px 45px 0px;
-	}
-}
-
-.profile_card{
-	margin: 20px 0px;
-	h1{
-		font-size: 50px;
-	}
-	p{
-		font-size: 16px;
-	}
-	@media only screen and (max-device-width: 768px){
-		margin: 12px 0px;
-		h1{
-			font-size: 30px;
-		}
-		p{
-			font-size: 12px;
-		}
-	}
-}
-
-.social a{
-	margin: 4px 8px;
-}
-
-.about, .skills, .featuredWork, .workhist, .experience {
-	padding: 12px;
-	margin: 8px 0px;
-	@media only screen and (max-device-width: 768px){
-		padding: 4px;
-		margin: 8px 0px;
-		small{
-			font-size: 16px;
-		}
-	}
-}
-
-.about {
-  h1{
-	  padding: 16px 20px 0px 20px;
-	  font-family: Roboto Mono, monospace;
-  }
-}
-
-#skills{
-	h1 {
-		padding: 16px 20px 0px 20px;
-		font-family: Roboto Mono, monospace;
-	}
-
-	>div{
-    >i{
-		  margin: 0px 16px;
-		  font-size: 50px;
+  	border-radius: 150px;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    @media only screen and (max-device-width: 768px) {
+        width: 100px;
+        height: 100px;
+        margin: 45px -8px 45px 0px;
     }
-  }
 }
 
-#featuredWork {
-	h1, h3{
-		font-family: Roboto Mono, monospace;
-	}
+.profile_card {
+  	margin: 20px 0px;
+    h1 {
+        font-size: 50px;
+    }
+    p {
+        font-size: 16px;
+    }
+    @media only screen and (max-device-width: 768px) {
+        margin: 12px 0px;
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
 }
 
-#workhist{
-	h1{
-		padding: 16px 20px 0px 20px;
-		font-family: Roboto Mono, monospace;
-	}
-	i{
-		margin: 0px 16px;
-		font-size: 35px;	
-	}
+.social a {
+    margin: 4px 8px;
 }
 
-.classes{
-	background-color:#ffffff;
-	color:#000000;
+.workhist {
+    h1 {
+        padding: 16px 20px 0px 20px;
+        font-family: Roboto Mono, monospace;
+    }
+    i {
+        margin: 0px 16px;
+        font-size: 35px;
+    }
 }
 
-.containclasses{
-	display: inline-block;
+.classes {
+    background-color:#ffffff;
+    color:#000000;
 }
 
-.bg-1{
-	color: #ffffff; /* White */
-	text-shadow: 2px 2px 4px #000000; /*Black shadow*/
+.containclasses {
+    >.col-xs-12 {
+        >ul {
+            >li {
+                >p {
+                    >span {
+                        &.techUsed {
+                            >i {
+                                margin: 0px 8px;
+                                font-size: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-.bg-2{
-	background-color:#ffffff;
-	color:#000000;
-	border-radius: 0px 0px 5px 5px;
+.bg-1 {
+    color: #ffffff; /* White */
+    text-shadow: 2px 2px 4px #000000; /*Black shadow*/
 }
 
-.bg2-b{
-	background-color: #f8f8f8;
+.bg-2 {
+    background-color:#ffffff;
+    color:#000000;
+    border-radius: 0px 0px 5px 5px;
 }
 
-.footer{
-	padding: 12px 20px;
-	margin: 8px auto 0px auto;
-	border-radius: 0px 2px 0px 2px;
-	.col-xs-6{
-		padding: 0px;
-	}
+.bg2-b {
+    background-color: #f8f8f8;
 }
 
-#featProjImageContainer{
-	img {
-		height: 500px;
-	}
+.footer {
+    padding: 12px 20px;
+    margin: 8px auto 0px auto;
+    border-radius: 0px 2px 0px 2px;
+    .col-xs-6{
+        padding: 0px;
+    }
+}
+
+#featProjImageContainer {
+    img {
+        height: 500px;
+    }
 }
 
 /*div Styles*/
 div	{
-	&.box {
-		background-color:#000000; 
-		color:#ffffff; 
-		width:60%; 
-		margin:0 auto; 
-		padding:20px;
-		opacity:0.9;
-	}
-	&.mid {
-		width:60%; 
-		margin:0 auto;
-	}
+  	&.box {
+        background-color:#000000; 
+        color:#ffffff; 
+        width:60%; 
+        margin:0 auto; 
+        padding:20px;
+        opacity:0.9;
+    }
+    &.mid {
+        width:60%; 
+        margin:0 auto;
+    }
 }
 
 /*Unordered List*/
 ul {
-	&.a{
-		list-style-type: square;
-	}
+  	&.a{
+        list-style-type: square;
+    }
 }
