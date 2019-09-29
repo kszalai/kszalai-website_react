@@ -156,6 +156,23 @@ a {
     }
 }
 
+div {
+    &.icon-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        >.workHistIcon {
+            font-size: 35px;
+            margin: 4px 8px;
+        }
+        >.skillIcon {
+            font-size: 50px;
+            margin: 4px 16px;
+        }
+    }
+}
+
 .profile_pic {
   	border-radius: 150px;
     margin: 20px;

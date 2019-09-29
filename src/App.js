@@ -7,19 +7,6 @@ import WorkDetail from './work/work-detail';
 import Footer from './footer';
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.workHistIconSize = {
-            fontSize: '35px',
-            margin: '0px 8px'
-        };
-        this.skillIconSize = {
-            fontSize: '50px',
-            margin: '0px 16px'
-        };
-    }
-
     render() {
         return (
             <div>
@@ -28,12 +15,12 @@ class App extends React.Component {
                 <br />
                 <div className={'container-fluid'} style={{padding: '0px'}}>
                     <div className={'col-sm-6 col-xs-12'} id="leftCol">
-                        <Card name="About Me" desc="Everyone has a story to tell!" id="#about">
+                        <Card name="😁 About Me" desc="Everyone has a story to tell!" id="#about">
                             <div className={'container-fluid col-xs-12 text-left'}>
                                 <p>
                                     Hello! My name is Kyle!<br /><br />
-                                    Currently I'm in southeast Michigan, and during the week I make my way out to Novi to work at Daifuku.<br />
-                                    As a Software Engineer there, I'm a full stack developer currently leading front-end development on their products.<br /><br />
+                                    Currently I'm in southeast Michigan, and during the week I make my way out to Detroit to work at Quicken Loans!<br /> 
+                                    As a Software Engineer there, I'm a full stack developer currently doing front-end development on their products.<br /><br />
                                     I graduated with my Bachelor of Science degree in Computer Science from Eastern Michigan University!
                                     During my time at EMU, I did some pretty cool stuff! I worked for the campus Housing &amp; Residence Life program there as an RA. 
                                     I was also apart of Kick and Push Longboarding Club, made the dean's list 6 times, and graduated magna cum laude with a 3.74 cumulative GPA.<br /><br />
@@ -47,9 +34,27 @@ class App extends React.Component {
                                 </p>
                             </div>
                         </Card>
-                        <Card name="Work History" desc="Oh man, look at the places I've been!" titleAlign="center">
+                        <Card name="💻 Work History" desc="Oh man, look at the places I've been!" id="#workHist" titleAlign="center">
                             <div className={'text-left'}>
-                                <WorkHistory position="Software Engineer" company="Daifuku" location="Novi, MI" startTime="May 2016">
+                                <WorkHistory position="Software Engineer" company="Quicken Loans" location="Detroit, MI" startTime="August 2019">
+                                    <WorkDetail>
+                                        Working on web application utilizing Angular. Conducting code reviews. Wrote unit tests in Jasmine for
+                                        various components, services, pipes, and directives for application.
+                                        <br />
+                                        <br />
+                                        <b><u>Technologies Used</u></b>
+                                        <br />
+                                        <div className={'icon-container'}>
+                                            <i className={'devicon-angularjs-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-typescript-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-sass-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-html5-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-bootstrap-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-github-plain colored workHistIcon'}></i>
+                                        </div>
+                                    </WorkDetail>
+                                </WorkHistory>
+                                <WorkHistory position="Software Engineer" company="Daifuku" location="Novi, MI" startTime="May 2016" endTime="August 2019">
                                     <WorkDetail>
                                         Built web applications utilizing Angular, TypeScript, C# .NET Core, and MSSQL to create progressive web apps (PWA).
                                         Led Angular front-end development. Built C# .NET Core backend. By developing PWAs for these products, these allowed
@@ -70,17 +75,22 @@ class App extends React.Component {
                                     </WorkDetail>
                                     <WorkDetail>
                                         Assisted in managing local GitLab server. Trained engineers on how to use Git for version control. Assisted engineers with
-                                        questions on using Git, and specifics with using GitLab.<br /><br />
-                                        <b><u>Technologies Used</u></b><br />
-                                        <i className={'devicon-angularjs-plain colored'} style={this.workHistIconSize}></i>
-                                        <i className={'devicon-typescript-plain colored'} style={this.workHistIconSize}></i>
-                                        <i className={'devicon-nodejs-plain colored'} style={this.workHistIconSize}></i>
-                                        <i className={'devicon-csharp-plain colored'} style={this.workHistIconSize}></i>
-                                        <i className={'devicon-cplusplus-plain colored'} style={this.workHistIconSize}></i><br />
-                                        <i className={'devicon-sass-plain colored'} style={this.workHistIconSize}></i>
-                                        <i className={'devicon-html5-plain colored'} style={this.workHistIconSize}></i>
-                                        <i className={'devicon-bootstrap-plain colored'} style={this.workHistIconSize}></i>
-                                        <i className={'devicon-gitlab-plain colored'} style={this.workHistIconSize}></i>
+                                        questions on using Git, and specifics with using GitLab.
+                                        <br />
+                                        <br />
+                                        <b><u>Technologies Used</u></b>
+                                        <br />
+                                        <div className={'icon-container'}>
+                                            <i className={'devicon-angularjs-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-typescript-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-nodejs-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-csharp-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-cplusplus-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-sass-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-html5-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-bootstrap-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-gitlab-plain colored workHistIcon'}></i>
+                                        </div>
                                     </WorkDetail>
                                 </WorkHistory>
                                 <WorkHistory position="Resident Advisor" company="Eastern Michigan University" location="Ypsilanti, MI" startTime="August 2014" endTime="April 2016">
@@ -93,63 +103,81 @@ class App extends React.Component {
                                     <WorkDetail>
                                         Wrote a Google Apps Script Web Application that utilizes Google Forms, 
                                         Google Sheets, Google Calendar, and Gmail to organize and assign move 
-                                        out times for residents throughout the hall.<br /><br />
-                                        <b><u>Technologies Used</u></b><br />
-                                        <i className={'devicon-javascript-plain colored'} style={this.workHistIconSize}></i>
-                                        <i className={'devicon-google-plain-wordmark colored'} style={this.workHistIconSize}></i>
+                                        out times for residents throughout the hall.
+                                        <br />
+                                        <br />
+                                        <b><u>Technologies Used</u></b>
+                                        <br />
+                                        <div className={'icon-container'}>
+                                            <i className={'devicon-javascript-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-google-plain-wordmark colored workHistIcon'}></i>
+                                        </div>
                                     </WorkDetail>
                                 </WorkHistory>
                                 <WorkHistory position="Software Engineering Intern" company="KLA Laboratories, Inc." location="Dearborn, MI" startTime="July 2015" endTime="August 2015">
                                     <WorkDetail>
                                         Developed a Visual C# Windows Form Application implementing Microsoft Office 
-                                        libraries to output a spreadsheet used to complete networking surveys.<br />
-                                        <b><u>Technologies used for development</u></b><br />
-                                        <i className={'devicon-csharp-plain colored'} style={this.workHistIconSize}></i>
-                                        <i className={'devicon-dot-net-plain colored'} style={this.workHistIconSize}></i>
-                                        <i className={'devicon-windows8-plain colored'} style={this.workHistIconSize}></i>
+                                        libraries to output a spreadsheet used to complete networking surveys.
+                                        <br />
+                                        <br />
+                                        <b><u>Technologies used for development</u></b>
+                                        <br />
+                                        <div className={'icon-container'}>
+                                            <i className={'devicon-csharp-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-dot-net-plain colored workHistIcon'}></i>
+                                            <i className={'devicon-windows8-plain colored workHistIcon'}></i>
+                                        </div>
                                     </WorkDetail>
                                 </WorkHistory>
                             </div>
                         </Card>
                     </div>
                     <div className={'col-sm-6 col-xs-12'} id="rightCol">
-                        <Card name="Skills" desc="I'm a Software Engineer that likes to focus on Mobile &amp; Web Development!" id="#skills">
+                        <Card name="👨‍💻 Skills" desc="I'm a Software Engineer that likes to focus on Mobile &amp; Web Development!" id="#skills">
                             <div className={'col-xs-12'} style={{padding: '0px 24px'}}>
                                 <h4>Platforms</h4>
-                                <i className={'devicon-android-plain colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-apple-plain colored'} style={this.skillIconSize} data-toggle="tooltip" data-trigger="hover" data-placement="bottom" title="iOS"></i>
-                                <i className={'devicon-windows8-plain colored'} style={this.skillIconSize} data-toggle="tooltip" data-trigger="hover" data-placement="bottom" title="Windows"></i>
+                                <div className={'icon-container'}>
+                                    <i className={'devicon-android-plain colored skillIcon'} ></i>
+                                    <i className={'devicon-apple-plain colored skillIcon'} data-toggle="tooltip" data-trigger="hover" data-placement="bottom" title="iOS"></i>
+                                    <i className={'devicon-windows8-plain colored skillIcon'} data-toggle="tooltip" data-trigger="hover" data-placement="bottom" title="Windows"></i>
+                                </div>
                                 <br />
                                 <h4>Languages</h4>
-                                <i className={'devicon-java-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-csharp-plain colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-python-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-swift-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <br />
-                                <i className={'devicon-c-plain colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-typescript-plain colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-javascript-plain colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-jquery-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <br />
-                                <i className={'devicon-html5-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-css3-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-sass-plain colored'} style={this.skillIconSize}></i>
+                                <div className={'icon-container'}>
+                                    <i className={'devicon-java-plain-wordmark colored skillIcon'} ></i>
+                                    <i className={'devicon-csharp-plain colored skillIcon'} ></i>
+                                    <i className={'devicon-python-plain-wordmark colored skillIcon'} ></i>
+                                    <i className={'devicon-swift-plain-wordmark colored skillIcon'} ></i>
+                                    <i className={'devicon-c-plain colored skillIcon'} ></i>
+                                    <i className={'devicon-typescript-plain colored skillIcon'} ></i>
+                                    <i className={'devicon-javascript-plain colored skillIcon'} ></i>
+                                    <i className={'devicon-jquery-plain-wordmark colored skillIcon'} ></i>
+                                    <i className={'devicon-html5-plain-wordmark colored skillIcon'} ></i>
+                                    <i className={'devicon-css3-plain-wordmark colored skillIcon'} ></i>
+                                    <i className={'devicon-sass-plain colored skillIcon'} ></i>
+                                </div>
                                 <br />
                                 <h4>Frameworks</h4>
-                                <i className={'devicon-angularjs-plain colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-react-plain colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-bootstrap-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-nodejs-plain colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-dotnet-plain-wordmark colored'} style={this.skillIconSize}></i>
+                                <div className={'icon-container'}>
+                                    <i className={'devicon-angularjs-plain colored skillIcon'}></i>
+                                    <i className={'devicon-react-plain colored skillIcon'}></i>
+                                    <i className={'devicon-bootstrap-plain-wordmark colored skillIcon'}></i>
+                                    <i className={'devicon-nodejs-plain colored skillIcon'}></i>
+                                    <i className={'devicon-dotnet-plain-wordmark colored skillIcon'}></i>
+                                </div>
                                 <br />
                                 <h4>Source Control/Tools</h4>
-                                <i className={'devicon-git-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-github-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-gitlab-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-sourcetree-plain colored'} style={this.skillIconSize} data-toggle="tooltip" data-trigger="hover" data-placement="bottom" title="Subversion"></i>
+                                <div className={'icon-container'}>
+                                    <i className={'devicon-git-plain-wordmark colored skillIcon'}></i>
+                                    <i className={'devicon-github-plain-wordmark colored skillIcon'}></i>
+                                    <i className={'devicon-gitlab-plain-wordmark colored skillIcon'}></i>
+                                    <i className={'devicon-sourcetree-plain colored skillIcon'} data-toggle="tooltip" data-trigger="hover" data-placement="bottom" title="Subversion"></i>
+                                </div>
                                 <h4>Database</h4>
-                                <i className={'devicon-mysql-plain-wordmark colored'} style={this.skillIconSize}></i>
-                                <i className={'devicon-windows8-plain colored'} style={this.skillIconSize} data-toggle="tooltip" data-trigger="hover" data-placement="bottom" title="MSSQL"></i>
+                                <div className={'icon-container'}>
+                                    <i className={'devicon-mysql-plain-wordmark colored skillIcon'}></i>
+                                    <i className={'devicon-windows8-plain colored skillIcon'} data-toggle="tooltip" data-trigger="hover" data-placement="bottom" title="MSSQL"></i>
+                                </div>
                                 <br />
                                 <br />
                                 <p>
