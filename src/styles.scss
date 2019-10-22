@@ -19,6 +19,8 @@ $secondaryTextColor_light: rgba(0,0,0,0.54);
 $hintTextColor_dark: rgba(255,255,255,0.5);
 $hintTextColor_light: rgba(0,0,0,0.38);
 $background-color: #FAFAFA;
+$background-color-dark: #121212;
+$surface-color-dark: #1F1F1F;
 $theme-color: #212121;
 $theme-color_dark: #000000;
 $font-stack: Roboto, Arial, Helvetica, sans-serif;
@@ -28,6 +30,10 @@ body {
     font-family: $font-stack;
     color:#000000;
     padding-top: 70px;
+    @media(prefers-color-scheme: dark) {
+        background: $background-color-dark;
+        color: #FFFFFF;
+    }
 }
 
 h1  {
@@ -113,6 +119,23 @@ a {
             color: $primaryTextColor_dark;
         }
     }
+
+    @media (prefers-color-scheme: dark) {
+        .dropdown-menu { 
+            background-color: $surface-color-dark;
+            >li {
+                >a {
+                    color: #FFFFFF;
+                    &:hover {
+                        background: #181818;
+                    }
+                    &:focus {
+                        background: #000000;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .navbar-brand	{
@@ -145,10 +168,18 @@ a {
             font-size: 16px;
         }
     }
+    @media (prefers-color-scheme: dark) {
+        background-color: $surface-color-dark;
+    }
     h1 {
         &.card-header {
             padding: 16px 20px 0px 20px;
             font-family: Roboto Mono, monospace;
+            @media (prefers-color-scheme: dark) {
+                small {
+                    color: #FFFFFF;
+                }
+            }
         }
     }
     h3 {
@@ -293,5 +324,13 @@ div	{
 ul {
   	&.a{
         list-style-type: square;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .devicon-apple-original, .devicon-apple-plain, .devicon-github-original-wordmark, .devicon-github-plain-wordmark, .devicon-github-original, .devicon-github-plain{
+        &.colored {
+            color: #FFFFFF;
+        }
     }
 }
