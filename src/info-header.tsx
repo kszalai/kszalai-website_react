@@ -27,5 +27,3 @@ export class InfoHeader extends React.Component {
         );
     }
 }
-
-export default InfoHeader;

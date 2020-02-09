@@ -34,5 +34,3 @@ export class NavHeader extends React.Component<NavHeaderProps> {
         this.props.onMenuExpandClick('menuOpen');
     }
 }
-
-export default NavHeader;

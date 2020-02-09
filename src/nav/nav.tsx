@@ -1,7 +1,7 @@
 import React from 'react';
-import NavHeader from './nav-header';
-import NavLink from './nav-link';
-import NavDropdown from './nav-dropdown';
+import { NavHeader } from './nav-header';
+import { NavLink } from './nav-link';
+import { NavDropdown } from './nav-dropdown';
 
 interface NavProps { }
 
@@ -46,5 +46,3 @@ export class Nav extends React.Component<NavProps, NavState> {
         }));
 	};
 }
-
-export default Nav;

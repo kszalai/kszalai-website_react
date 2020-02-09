@@ -14,5 +14,3 @@ export class NavLink extends React.Component<NavLinkProps> {
         );
     }
 }
-
-export default NavLink;

@@ -1,10 +1,10 @@
 import React from 'react';
-import Nav from './nav/nav';
-import InfoHeader from './info-header';
-import Card from './card';
-import WorkHistory from './work/work-history';
-import WorkDetail from './work/work-detail';
-import Footer from './footer';
+import { Nav } from './nav/nav';
+import { InfoHeader } from './info-header';
+import { Card } from './card';
+import { WorkHistory } from './work/work-history';
+import { WorkDetail } from './work/work-detail';
+import { Footer } from './footer';
 
 export class App extends React.Component {
     render() {
@@ -206,5 +206,3 @@ export class App extends React.Component {
         );
     }
 }
-
-export default App;

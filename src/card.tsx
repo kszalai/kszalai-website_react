@@ -32,5 +32,3 @@ export class Card extends React.Component<CardProps> {
         );
     }
 }
-
-export default Card;

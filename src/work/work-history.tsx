@@ -21,5 +21,3 @@ export class WorkHistory extends React.Component<WorkHistoryProps> {
         );
     }
 }
-
-export default WorkHistory;
