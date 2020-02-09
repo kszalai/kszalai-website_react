@@ -3,8 +3,14 @@ import NavHeader from './nav-header';
 import NavLink from './nav-link';
 import NavDropdown from './nav-dropdown';
 
-class Nav extends React.Component {
-	constructor(props) {
+interface NavProps { }
+
+interface NavState {
+	menuOpen: boolean;
+}
+
+export class Nav extends React.Component<NavProps, NavState> {
+	constructor(props: NavProps) {
 		super(props);
 		this.onNavOpen = this.onNavOpen.bind(this);
 		this.state = { menuOpen: false };
@@ -34,7 +40,7 @@ class Nav extends React.Component {
 		);
 	}
 
-	onNavOpen = (event) => {
+	onNavOpen = (event: any) => {
 		this.setState(state => ({
             menuOpen: !state.menuOpen
         }));

@@ -1,7 +1,16 @@
 import React from 'react';
 
-class NavDropdown extends React.Component {
-    constructor(props) {
+interface NavDropdownProps {
+    iconClass: string;
+    name: string;
+}
+
+interface NavDropdownState {
+    menuOpen: boolean;
+}
+
+export class NavDropdown extends React.Component<NavDropdownProps, NavDropdownState> {
+    constructor(props: NavDropdownProps) {
         super(props);
         this.state = { menuOpen: false };
         this.toggleMenu = this.toggleMenu.bind(this);

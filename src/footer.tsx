@@ -1,7 +1,9 @@
 import React from 'react';
 
-class Footer extends React.Component {
-    constructor(props) {
+export class Footer extends React.Component {
+    currentYear: number;
+
+    constructor(props: any) {
         super(props);
         this.currentYear = new Date().getFullYear();
     }

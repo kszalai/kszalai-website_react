@@ -1,7 +1,7 @@
 import React from 'react';
 import profilePic from './assets/profile_pic.jpg'
 
-class InfoHeader extends React.Component {
+export class InfoHeader extends React.Component {
     render() {
         return (
             <div className={'container'}>

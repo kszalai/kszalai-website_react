@@ -6,7 +6,7 @@ import WorkHistory from './work/work-history';
 import WorkDetail from './work/work-detail';
 import Footer from './footer';
 
-class App extends React.Component {
+export class App extends React.Component {
     render() {
         return (
             <div>
