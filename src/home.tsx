@@ -31,8 +31,18 @@ export class Home extends React.Component {
                         <div className={'text-left'}>
                             <WorkHistory position="Software Engineer" company="Quicken Loans" location="Detroit, MI" startTime="August 2019">
                                 <WorkDetail>
-                                    Working on web application utilizing Angular. Conducting code reviews. Wrote unit tests in Jasmine for
-                                    various components, services, pipes, and directives for application.
+                                    Working on Rocket HQ web application utilizing Angular. Added library to enable gestures on the web! Conducting code reviews.
+                                    Wrote unit tests in Jasmine for various components, services, pipes, and directives for application
+                                </WorkDetail>
+                                <WorkDetail>
+                                    Extracted portion of the Rocket HQ web app to expose through an npm module for other team members to use. Provided
+                                    a component and service, and testing stubs through a module to publish on a JFrog Artifactory npm repository. Made
+                                    repository containing the code open for others to contribute to.
+                                </WorkDetail>
+                                <WorkDetail>
+                                    Developed an Android app with Kotlin implementing the single activity multi fragment architecture using Android Jetpack
+                                    components (Navigation, ViewModels, DataBinding, CameraX, etc.) to create a system for checking out mobile devices for our team.
+                                    Created backend with Firebase using Cloud Firestore, Cloud Functions, and Authentication for storing data for the app.
                                     <br />
                                     <br />
                                     <b><u>Technologies Used</u></b>
@@ -43,6 +53,8 @@ export class Home extends React.Component {
                                         <i className={'devicon-sass-plain colored workHistIcon'}></i>
                                         <i className={'devicon-html5-plain colored workHistIcon'}></i>
                                         <i className={'devicon-bootstrap-plain colored workHistIcon'}></i>
+                                        <i className={'devicon-android-plain colored workHistIcon'}></i>
+                                        <i className={'devicon-nodejs-plain colored workHistIcon'}></i>
                                         <i className={'devicon-github-plain colored workHistIcon'}></i>
                                     </div>
                                 </WorkDetail>
