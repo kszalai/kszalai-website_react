@@ -2,9 +2,9 @@ import React from 'react';
 
 interface CardProps {
 	titleAlign?: "-moz-initial" | "inherit" | "initial" | "revert" | "unset" | "center" | "end" | "justify" | "left" | "match-parent" | "right" | "start" | undefined;
-	id: string;
+	id?: string;
 	name: string;
-	desc: string;
+	desc?: string;
 }
 
 export class Card extends React.Component<CardProps> {
