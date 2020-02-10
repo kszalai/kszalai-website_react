@@ -1,6 +1,14 @@
 import React from 'react';
 
-class WorkHistory extends React.Component {
+interface WorkHistoryProps {
+    position: string;
+    company: string;
+    location: string;
+    startTime: string;
+    endTime?: string;
+}
+
+export class WorkHistory extends React.Component<WorkHistoryProps> {
     render() {
         return (
             <div className={'col-xs-12 text-left'}>
@@ -13,5 +21,3 @@ class WorkHistory extends React.Component {
         );
     }
 }
-
-export default WorkHistory;

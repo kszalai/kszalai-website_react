@@ -1,7 +1,11 @@
 import React from 'react';
 
-class NavHeader extends React.Component {
-    constructor(props) {
+interface NavHeaderProps {
+    onMenuExpandClick: (mode: string) => void
+} 
+
+export class NavHeader extends React.Component<NavHeaderProps> {
+    constructor(props: any) {
         super(props);
         this.menuExpandClick = this.menuExpandClick.bind(this);
     }
@@ -30,5 +34,3 @@ class NavHeader extends React.Component {
         this.props.onMenuExpandClick('menuOpen');
     }
 }
-
-export default NavHeader;
