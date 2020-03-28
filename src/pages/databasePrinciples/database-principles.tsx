@@ -1,10 +1,10 @@
 import React from "react";
-import { Card } from "../../../card";
+import { Card } from "../../card";
 
 export class DatabasePrinciples extends React.Component {
     render() {
         return (
-            <div className={'container'} style={{padding: '0px'}}>
+            <div className={'container'}>
                 <Card name="Database Princples">
                     <div className={'container-fluid col-xs-12 text-left'}>
                         <p>

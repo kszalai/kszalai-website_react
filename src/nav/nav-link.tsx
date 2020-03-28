@@ -1,4 +1,5 @@
 import React from 'react';
+import { Nav } from 'react-bootstrap';
 
 interface NavLinkProps {
     hrefLink: string;
@@ -7,10 +8,12 @@ interface NavLinkProps {
     name?: string;
 }
 
-export class NavLink extends React.Component<NavLinkProps> {
+export class KsNavLink extends React.Component<NavLinkProps> {
     render() {
         return (
-            <li><a href={this.props.hrefLink} title={this.props.title}><i className={this.props.iconClass}></i>&nbsp;{this.props.name}</a></li>
+            <Nav.Link href={this.props.hrefLink}>
+                <i className={this.props.iconClass}></i>&nbsp;{this.props.name}
+            </Nav.Link>
         );
     }
 }

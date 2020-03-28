@@ -29,7 +29,7 @@ body {
     background: $background-color;
     font-family: $font-stack;
     color:#000000;
-    padding-top: 70px;
+    padding-top: 74px;
     @media(prefers-color-scheme: dark) {
         background: $background-color-dark;
         color: #FFFFFF;
@@ -293,6 +293,10 @@ div {
     padding: 12px 20px;
     margin: 8px auto 0px auto;
     border-radius: 0px 2px 0px 2px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     .col-xs-6{
         padding: 0px;
     }
@@ -304,7 +308,6 @@ div {
     }
 }
 
-/*div Styles*/
 div	{
   	&.box {
         background-color:#000000; 
@@ -320,11 +323,19 @@ div	{
     }
 }
 
-/*Unordered List*/
 ul {
   	&.a{
         list-style-type: square;
     }
+}
+
+.info-header-card {
+    @extend .card;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media (prefers-color-scheme: dark) {

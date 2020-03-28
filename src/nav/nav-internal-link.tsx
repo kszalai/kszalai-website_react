@@ -7,10 +7,10 @@ interface NavInternalLinkProps {
     name?: string;
 }
 
-export class NavInternalLink extends React.Component<NavInternalLinkProps> {
+export class KsNavInternalLink extends React.Component<NavInternalLinkProps> {
     render() {
         return (
-            <li><Link to={this.props.link}><i className={this.props.iconClass}></i>&nbsp;{this.props.name}</Link></li>
+            <Link to={this.props.link}><i className={this.props.iconClass}></i>&nbsp;{this.props.name}</Link>
         );
     }
 }
